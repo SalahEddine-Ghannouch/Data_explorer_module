@@ -1,0 +1,8 @@
+data_explorer.admin:
+  title: 'Data Explorer'
+  description: 'Visualize and analyze Drupal database structure'
+  route_name: data_explorer.admin
+  menu_name: admin
+  parent: system.admin
+  weight: 50
+

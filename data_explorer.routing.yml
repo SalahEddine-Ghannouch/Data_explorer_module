@@ -1,0 +1,48 @@
+data_explorer.admin:
+  path: "/admin/tools/data-explorer"
+  defaults:
+    _controller: '\Drupal\data_explorer\Controller\SalahController::content'
+    _title: 'Salah'
+  requirements:
+    _permission: 'access data explorer'
+
+data_explorer.api.schema:
+  path: '/admin/tools/data-explorer/api/schema'
+  defaults:
+    _controller: '\Drupal\data_explorer\Controller\DataExplorerApiController::getSchema'
+  requirements:
+    _permission: 'access data explorer'
+    _format: json
+
+data_explorer.api.relationships:
+  path: '/admin/tools/data-explorer/api/relationships'
+  defaults:
+    _controller: '\Drupal\data_explorer\Controller\DataExplorerApiController::getRelationships'
+  requirements:
+    _permission: 'access data explorer'
+    _format: json
+
+data_explorer.api.search:
+  path: '/admin/tools/data-explorer/api/search'
+  defaults:
+    _controller: '\Drupal\data_explorer\Controller\DataExplorerApiController::search'
+  requirements:
+    _permission: 'access data explorer'
+    _format: json
+
+data_explorer.api.query:
+  path: '/admin/tools/data-explorer/api/query'
+  defaults:
+    _controller: '\Drupal\data_explorer\Controller\DataExplorerApiController::executeQuery'
+  requirements:
+    _permission: 'access data explorer'
+    _format: json
+  methods: [GET, POST]
+
+data_explorer.export:
+  path: '/admin/tools/data-explorer/export'
+  defaults:
+    _controller: '\Drupal\data_explorer\Controller\DataExplorerController::exportData'
+  requirements:
+    _permission: 'export data explorer'
+

@@ -1,0 +1,7 @@
+name: Data Explorer
+type: module
+description: 'Visualizes and analyzes Drupal database structure with interactive relationship graphs, query builder, and data export tools.'
+core_version_requirement: ^9 || ^10 || ^11
+package: Custom
+version: 1.0.0
+

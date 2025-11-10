@@ -1,0 +1,9 @@
+access data explorer:
+  title: 'Access Data Explorer'
+  description: 'Access the Data Explorer tool to view and analyze database structure.'
+  restrict access: false
+
+export data explorer:
+  title: 'Export Data Explorer results'
+  description: 'Export query results from Data Explorer as CSV or JSON files.'
+  restrict access: false

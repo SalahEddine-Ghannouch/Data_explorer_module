@@ -1,0 +1,350 @@
+/**
+ * @file
+ * Styles for Data Explorer module.
+ */
+
+.data-explorer-tabs {
+  margin-bottom: 20px;
+  border-bottom: 2px solid #ccc;
+}
+
+.data-explorer-tabs .tabs {
+  display: flex;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.data-explorer-tabs .tabs li {
+  margin: 0;
+  padding: 0;
+}
+
+.data-explorer-tabs .tabs a {
+  display: block;
+  padding: 10px 20px;
+  text-decoration: none;
+  color: #333;
+  border-bottom: 3px solid transparent;
+  transition: all 0.3s;
+}
+
+.data-explorer-tabs .tabs a:hover {
+  background-color: #f5f5f5;
+}
+
+.data-explorer-tabs .tabs a.active {
+  border-bottom-color: #0073aa;
+  color: #0073aa;
+  font-weight: bold;
+}
+
+.tab-content {
+  display: none;
+  padding: 20px;
+}
+
+.tab-content.active {
+  display: block;
+}
+
+/* Schema Explorer */
+#schema-explorer {
+  padding: 20px;
+}
+
+.schema-table-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 15px;
+  margin-top: 20px;
+}
+
+.schema-table-card {
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  padding: 15px;
+  background: #fff;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.schema-table-card h4 {
+  margin: 0 0 10px 0;
+  color: #0073aa;
+  font-size: 16px;
+}
+
+.schema-table-card .table-type {
+  display: inline-block;
+  padding: 2px 8px;
+  border-radius: 3px;
+  font-size: 12px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.schema-table-card .table-type.base {
+  background: #e3f2fd;
+  color: #1976d2;
+}
+
+.schema-table-card .table-type.data {
+  background: #f3e5f5;
+  color: #7b1fa2;
+}
+
+.schema-table-card .table-type.field_data {
+  background: #e8f5e9;
+  color: #388e3c;
+}
+
+.schema-table-card .table-type.revision {
+  background: #fff3e0;
+  color: #f57c00;
+}
+
+.schema-table-card .columns {
+  margin-top: 10px;
+  font-size: 13px;
+}
+
+.schema-table-card .columns ul {
+  list-style: none;
+  padding: 0;
+  margin: 5px 0 0 0;
+}
+
+.schema-table-card .columns li {
+  padding: 3px 0;
+  color: #666;
+}
+
+/* Relationship Graph */
+#relationship-graph {
+  width: 100%;
+  height: 600px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  background: #fafafa;
+}
+
+.graph-controls {
+  margin-bottom: 15px;
+  padding: 10px;
+  background: #f5f5f5;
+  border-radius: 4px;
+}
+
+.graph-controls select {
+  padding: 5px 10px;
+  margin-right: 10px;
+  border: 1px solid #ccc;
+  border-radius: 3px;
+}
+
+.graph-controls button {
+  padding: 5px 15px;
+  background: #0073aa;
+  color: white;
+  border: none;
+  border-radius: 3px;
+  cursor: pointer;
+}
+
+.graph-controls button:hover {
+  background: #005a87;
+}
+
+/* Query Builder */
+#query-builder {
+  padding: 20px;
+}
+
+.query-builder-form {
+  background: #f9f9f9;
+  padding: 20px;
+  border-radius: 4px;
+  margin-bottom: 20px;
+}
+
+.query-builder-form .form-row {
+  margin-bottom: 15px;
+}
+
+.query-builder-form label {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: bold;
+  color: #333;
+}
+
+.query-builder-form select,
+.query-builder-form input {
+  width: 100%;
+  max-width: 400px;
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 3px;
+}
+
+.query-builder-form .field-selector {
+  max-height: 200px;
+  overflow-y: auto;
+  border: 1px solid #ddd;
+  padding: 10px;
+  background: white;
+  border-radius: 3px;
+}
+
+.query-builder-form .field-checkbox {
+  margin: 5px 0;
+}
+
+.query-builder-form button {
+  padding: 10px 20px;
+  background: #0073aa;
+  color: white;
+  border: none;
+  border-radius: 3px;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+.query-builder-form button:hover {
+  background: #005a87;
+}
+
+.query-results {
+  margin-top: 20px;
+}
+
+.query-results table {
+  width: 100%;
+  border-collapse: collapse;
+  background: white;
+}
+
+.query-results th {
+  background: #0073aa;
+  color: white;
+  padding: 10px;
+  text-align: left;
+  font-weight: bold;
+}
+
+.query-results td {
+  padding: 8px 10px;
+  border-bottom: 1px solid #ddd;
+}
+
+.query-results tr:hover {
+  background: #f5f5f5;
+}
+
+.export-buttons {
+  margin-top: 15px;
+}
+
+.export-buttons button {
+  padding: 8px 15px;
+  margin-right: 10px;
+  background: #28a745;
+  color: white;
+  border: none;
+  border-radius: 3px;
+  cursor: pointer;
+}
+
+.export-buttons button:hover {
+  background: #218838;
+}
+
+/* Search Interface */
+#search-interface {
+  padding: 20px;
+}
+
+.search-form {
+  background: #f9f9f9;
+  padding: 20px;
+  border-radius: 4px;
+  margin-bottom: 20px;
+}
+
+.search-form input {
+  width: 100%;
+  max-width: 500px;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 3px;
+  font-size: 14px;
+}
+
+.search-form .search-type {
+  margin: 15px 0;
+}
+
+.search-form button {
+  padding: 10px 20px;
+  background: #0073aa;
+  color: white;
+  border: none;
+  border-radius: 3px;
+  cursor: pointer;
+  font-size: 14px;
+  margin-top: 10px;
+}
+
+.search-results {
+  margin-top: 20px;
+}
+
+.search-result-item {
+  background: white;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  padding: 15px;
+  margin-bottom: 15px;
+}
+
+.search-result-item h4 {
+  margin: 0 0 10px 0;
+  color: #0073aa;
+}
+
+.search-result-item .match-count {
+  color: #666;
+  font-size: 13px;
+  margin-bottom: 10px;
+}
+
+.search-result-item table {
+  width: 100%;
+  font-size: 13px;
+}
+
+.search-result-item table th {
+  background: #f5f5f5;
+  padding: 5px 10px;
+  text-align: left;
+}
+
+.search-result-item table td {
+  padding: 5px 10px;
+  border-bottom: 1px solid #eee;
+}
+
+.loading {
+  text-align: center;
+  padding: 20px;
+  color: #666;
+}
+
+.error {
+  background: #f8d7da;
+  color: #721c24;
+  padding: 10px;
+  border-radius: 4px;
+  margin: 10px 0;
+}
+

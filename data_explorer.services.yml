@@ -1,0 +1,21 @@
+services:
+  data_explorer.schema_service:
+    class: Drupal\data_explorer\Service\SchemaExplorerService
+    arguments: ['@database', '@entity_type.manager', '@entity_field.manager']
+  
+  data_explorer.relationship_mapper:
+    class: Drupal\data_explorer\Service\RelationshipMapperService
+    arguments: ['@database', '@entity_type.manager', '@entity_field.manager']
+  
+  data_explorer.query_builder:
+    class: Drupal\data_explorer\Service\QueryBuilderService
+    arguments: ['@database', '@entity_type.manager', '@entity_field.manager']
+  
+  data_explorer.data_exporter:
+    class: Drupal\data_explorer\Service\DataExporterService
+    arguments: ['@database']
+  
+  data_explorer.search_service:
+    class: Drupal\data_explorer\Service\SearchService
+    arguments: ['@database', '@entity_type.manager', '@entity_field.manager']
+

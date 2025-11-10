@@ -1,0 +1,23 @@
+<?php
+
+/**
+ * @file
+ * Data Explorer module - Visualizes and analyzes Drupal database structure.
+ */
+
+/**
+ * Implements hook_help().
+ */
+function data_explorer_help($route_name, \Drupal\Core\Routing\RouteMatchInterface $route_match) {
+  switch ($route_name) {
+    case 'help.page.data_explorer':
+      $output = '';
+      $output .= '<h3>' . t('About') . '</h3>';
+      $output .= '<p>' . t('Data Explorer is a tool that visualizes and analyzes the Drupal database structure. It maps relationships between entity tables, field tables, and revisions in an interactive graph view.') . '</p>';
+      return $output;
+
+    default:
+  }
+}
+
+

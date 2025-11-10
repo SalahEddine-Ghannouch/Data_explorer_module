@@ -1,0 +1,39 @@
+<?php
+
+/**
+ * @file
+ * Install, update and uninstall functions for the Data Explorer module.
+ */
+
+use Drupal\user\Entity\Role;
+
+/**
+ * Implements hook_install().
+ */
+function data_explorer_install() {
+  // Grant 'access data explorer' and 'export data explorer' permissions to Administrator role.
+  $admin_role = Role::load('administrator');
+  if ($admin_role) {
+    $admin_role->grantPermission('access data explorer');
+    $admin_role->grantPermission('export data explorer');
+    $admin_role->save();
+  }
+}
+
+/**
+ * Implements hook_uninstall().
+ */
+function data_explorer_uninstall() {
+  // Revoke Data Explorer permissions from all roles.
+  $roles = Role::loadMultiple();
+  foreach ($roles as $role) {
+    if ($role->hasPermission('access data explorer')) {
+      $role->revokePermission('access data explorer');
+    }
+    if ($role->hasPermission('export data explorer')) {
+      $role->revokePermission('export data explorer');
+    }
+    $role->save();
+  }
+}
+
